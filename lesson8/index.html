@@ -1,0 +1,18 @@
+<html>
+  <head> </head>
+  <body>
+    <form id="form">
+      <input id="login" type="text" name="login" />
+      <input id="password" type="password" name="password" />
+      <button type="reset">Reset</button>
+      <button>Wyślij</button>
+    </form>
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log("wyslane");
+      });
+    </script>
+  </body>
+</html>
