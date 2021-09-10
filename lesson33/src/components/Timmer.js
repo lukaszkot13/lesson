@@ -17,6 +17,20 @@ useEffect(() =>{
 
 
 
+useEffect(() => {
+   
+    if (counter % 5 === 0 && counter % 3 === 0) {
+        alert('te liczby sa podzielne przez 3 i 5', counter)
+    }else if (counter % 5 === 0){
+        alert('Counter podzielny tylko przez 5', counter)
+    }else if (counter % 3 === 0){
+        alert('Counter podzielny tylko przez 3', counter)
+    }
+}, [counter])
+
+useEffect(() => {
+    console.log('Counter change:', counter)
+},[counter])
 	
 	const header = <h1>Timer {date.toLocaleString()} </h1>
 
@@ -25,6 +39,7 @@ useEffect(() =>{
         {header}
         Counter: {counter} 
         <button onClick={()=> setCounter(counter +1)}>Click</button>
+        <button onClick={()=> setCounter(counter+3)}>Click +3</button>
     </div>
     )
 }
